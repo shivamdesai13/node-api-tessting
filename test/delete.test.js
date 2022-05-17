@@ -10,7 +10,10 @@ let chance = new CHANCE();
 //   address: "indore",
 // };
 
-describe("Test For Delete Confirmation", () => {
+
+// response = res.data[0]._id
+describe.skip("Test For Delete Confirmation", () => {
+   // beforeAll()
   test("registration successful", async () => {
     const result = await AXIOS.post(baseUrl, payload);
     expect(result.status).toEqual(201);
