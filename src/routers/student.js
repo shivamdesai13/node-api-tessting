@@ -102,7 +102,10 @@ router.post("/students", async (req, res) => {
           if(!req.params.id){
               return res.status(404).send();
           }
-          res.send(deleteStudent)
+          res.json({
+              id:req.params.id,
+              message:'account deleted successfully'
+          })
       }catch(e){
           res.status(500).send(e);
       }
